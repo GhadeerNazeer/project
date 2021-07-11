@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box ;
+    -moz-box-sizing:border-box ;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.container{
+    margin-left:auto ;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.root{
+    --main-color:#10cab7;
+}
+.header{
+    background-color: #fff;
+    padding: 20px;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width: 60px;
+}
+.links{
+    position: relative;
+}
+
+.links:hover ul{
+    display: block;
+}
+.links:hover .icon span:nth-child(2){
+    width: 100%;
+}
+.links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+.icon span{
+    background-color: #000;
+    height: 2px;
+    margin-bottom: 5px;
+}
+.icon span:first-child{
+    width: 100%;
+}
+.icon span:nth-child(2){
+    width:60%;
+    transition: 0.4s;
+}
+.icon span:last-child{
+    width: 100%;
+}
+  
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    } } 
+.header .links ul{
+    display: none;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     background-color: #f6f6f6;
+     position: absolute;
+     min-width:200px ;
+     top :calc(100% + 15px) ;
+     right: 0;
+     z-index: 1;
+    }
+.header .links:hover ul{
+    display: block;
+}
+.header .links ul::before{
+    content:"";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6  transparent;
+    top: -20px;
+    right: 5px;
+    position: absolute;
+    
+    }
+.header .links ul li a {
+    display: block;
+    text-decoration: none;
+    color:#333;
+    display: block;
+    padding: 15px;
+    transition: 0.4s;}
+.header .links ul li a:hover{
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a{
+    border-bottom: 1px solid #ddd;
+}
+.landing{
+    background-image: url(../image/beatenberg-2099823_1920.jpg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+.landing .intro-text{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    position: absolute;
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+.landing .intro-text h1{
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: #10cab7;
+}
+.landing .intro-text p{
+    font-size: 19px;
+    line-height: 1.8;
+}
